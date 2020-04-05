@@ -4,7 +4,7 @@
   "description": "Inject JS to the DOM to find vulnerable JavaScript libraries",
   "main": "index.js",
   "engines": {
-    "node": ">=8.0.0"
+    "node": ">=10.0.0"
   },
   "scripts": {
     "lint": "eslint . && npm run lint:lockfile",

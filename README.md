@@ -18,9 +18,11 @@
 
 # About
 
-js-vulns-detector
+This module provides a JavaScript bundle that can be injected into the DOM and detect which JavaScript libraries and versions are running, as well as the vulnerabilities associated with them.
 
-Inject JS to the DOM to find vulnerable JavaScript libraries
+This module provides several variation of bundles that can be used:
+
+- Global - provides JavaScript code that is not wrapped, and will call and return a function call result of the data when injected.
 
 # Install
 
