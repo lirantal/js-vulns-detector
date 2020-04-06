@@ -7,8 +7,7 @@
     "node": ">=10.0.0"
   },
   "scripts": {
-    "build": "rollup -c rollup.config.js --no-treeshake && npm run build:postbundle",
-    "build:postbundle": "node scripts/build-bundle.js",
+    "build": "node scripts/build-bundle.js",
     "lint": "eslint . && npm run lint:lockfile",
     "lint:lockfile": "lockfile-lint --path package-lock.json --type npm --validate-https --allowed-hosts npm yarn",
     "lint:fix": "eslint . --fix",
