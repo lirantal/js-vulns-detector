@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 /* eslint-disable security/detect-non-literal-fs-filename */
 
 const fs = require('fs')
@@ -7,7 +8,8 @@ const resolve = require('@rollup/plugin-node-resolve')
 const commonjs = require('@rollup/plugin-commonjs')
 const json = require('@rollup/plugin-json')
 
-const targetBundleFilepath = path.join(__dirname, '../', 'dist', 'bundle-global.js')
+const OUTPUT_FILE_PATH = path.join(__dirname, '../', 'dist', 'bundle-global.js')
+const INPUT_FILE_PATH = path.join(__dirname, '../', 'src/main.js')
 
 async function transpileJSBundle({ inputOptions, outputOptions }) {
   const bundle = await rollup.rollup(inputOptions)
@@ -17,14 +19,13 @@ async function transpileJSBundle({ inputOptions, outputOptions }) {
 
 async function createJSBundle() {
   const inputOptions = {
-    input: path.join(__dirname, '../', 'src/main.js'),
+    input: INPUT_FILE_PATH,
     treeshake: false,
     plugins: [json(), resolve(), commonjs()]
   }
 
   const outputOptions = {
     output: {
-      file: 'dist/bundle-base.js',
       format: 'esm'
     }
   }
@@ -39,7 +40,7 @@ async function createJSBundle() {
   }
 
   codeAsString += ';\nreturn YWxseW91cmJhc2VhcmViZWxvbmd0b3Vz();'
-  fs.writeFileSync(targetBundleFilepath, codeAsString)
+  fs.writeFileSync(OUTPUT_FILE_PATH, codeAsString)
 }
 
 createJSBundle()

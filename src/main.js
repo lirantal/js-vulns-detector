@@ -1,3 +1,4 @@
+/* eslint-disable no-eval */
 /* eslint-disable camelcase */
 /* eslint-disable no-unused-vars */
 /* eslint-disable node/no-unpublished-import */
@@ -5,11 +6,20 @@
 import * as vulnsData from '../vendors/snyk/snapshot.json'
 import '../node_modules/js-library-detector/library/libraries.js'
 import { getVulnerabilitiesForLibrary } from './VulnerabilitiesDetector'
-const jsLibsDetection = d41d8cd98f00b204e9800998ecf8427e_LibraryDetectorTests
+import { collectLibraries } from '../src/LibrariesDetector'
 
-function YWxseW91cmJhc2VhcmViZWxvbmd0b3Vz() {
+async function YWxseW91cmJhc2VhcmViZWxvbmd0b3Vz() {
+  const jsLibsDetectorVariableReferrence = eval(
+    'd41d8cd98f00b204e9800998ecf8427e_LibraryDetectorTests'
+  )
+
+  const libraries = await collectLibraries({
+    jsLibs: jsLibsDetectorVariableReferrence,
+    window: window
+  })
+
   const vulnerabilitiesFound = []
-  jsLibsDetection.forEach(function(jsLib) {
+  libraries.forEach(function(jsLib) {
     const vulnerabilities = getVulnerabilitiesForLibrary(jsLib, vulnsData)
     vulnerabilitiesFound.push(...vulnerabilities)
   })

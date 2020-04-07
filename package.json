@@ -96,8 +96,10 @@
     "testPathIgnorePatterns": [
       "/__tests__/.*/__fixtures__/.*"
     ],
+    "coveragePathIgnorePatterns": [
+      "main.js"
+    ],
     "collectCoverageFrom": [
-      "index.js",
       "src/**/*.{js,ts}"
     ],
     "testMatch": [
