@@ -32,14 +32,21 @@ npm install --save js-vulns-detector
 
 # Usage
 
-```js
-// @TODO
-const {} = require('js-vulns-detector')
+## One-off invocation
+
+To generate a bundle file:
+
+```sh
+npx js-vulns-detector --global --outfile bundle.js
 ```
 
-# Example
+## As a library
 
-<!-- TODO -->
+Access the bundle directly as an npm module:
+
+```js
+import 'js-vulns-detector/dist/bundle-global.js'
+```
 
 # Contributing
 
