@@ -2,13 +2,15 @@
   "name": "js-vulns-detector",
   "version": "0.0.0-development",
   "description": "Inject JS to the DOM to find vulnerable JavaScript libraries",
-  "main": "index.js",
+  "bin": {
+    "js-vulns-detector": "./bin/cli.js"
+  },
   "engines": {
     "node": ">=10.0.0"
   },
   "type": "module",
   "scripts": {
-    "build": "node scripts/build-bundle.js",
+    "build": "node ./bin/cli.js --global --outfile dist/bundle-global.js",
     "lint": "eslint src/* && npm run lint:lockfile",
     "lint:lockfile": "lockfile-lint --path package-lock.json --type npm --validate-https --allowed-hosts npm yarn",
     "lint:fix": "eslint . --fix",
@@ -41,7 +43,9 @@
     "type": "git",
     "url": "https://github.com/lirantal/js-vulns-detector.git"
   },
-  "dependencies": {},
+  "dependencies": {
+    "minimist": "^1.2.5"
+  },
   "devDependencies": {
     "@babel/plugin-transform-runtime": "^7.9.0",
     "@commitlint/cli": "^7.2.1",

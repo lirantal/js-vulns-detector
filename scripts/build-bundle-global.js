@@ -17,7 +17,11 @@ async function transpileJSBundle({ inputOptions, outputOptions }) {
   return output
 }
 
-async function createJSBundle() {
+async function createJSBundle({ outputFilepath }) {
+  if (!outputFilepath) {
+    outputFilepath = OUTPUT_FILE_PATH
+  }
+
   const inputOptions = {
     input: INPUT_FILE_PATH,
     treeshake: false,
@@ -40,7 +44,9 @@ async function createJSBundle() {
   }
 
   codeAsString += ';\nreturn YWxseW91cmJhc2VhcmViZWxvbmd0b3Vz();'
-  fs.writeFileSync(OUTPUT_FILE_PATH, codeAsString)
+  fs.writeFileSync(outputFilepath, codeAsString)
 }
 
-createJSBundle()
+module.exports = {
+  createJSBundle
+}
