@@ -44,6 +44,13 @@
     "type": "git",
     "url": "https://github.com/lirantal/js-vulns-detector.git"
   },
+  "files": [
+    "bin",
+    "src",
+    "dist",
+    "scripts",
+    "vendors"
+  ],
   "dependencies": {
     "minimist": "^1.2.5",
     "@rollup/plugin-commonjs": "^11.0.2",
