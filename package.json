@@ -10,7 +10,7 @@
   },
   "type": "module",
   "scripts": {
-    "build": "node ./bin/cli.cjs --global --outfile dist/bundle-global.js",
+    "build": "mkdir dist && node ./bin/cli.cjs --global --outfile dist/bundle-global.js",
     "lint": "eslint src/* && npm run lint:lockfile",
     "lint:lockfile": "lockfile-lint --path package-lock.json --type npm --validate-https --allowed-hosts npm yarn",
     "lint:fix": "eslint . --fix",
