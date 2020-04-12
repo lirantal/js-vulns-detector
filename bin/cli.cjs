@@ -3,7 +3,7 @@
 
 const args = require('minimist')(process.argv.slice(2))
 const path = require('path')
-const { createJSBundle } = require('../scripts/build-bundle-global')
+const { createJSBundle } = require('../scripts/build-bundle-global.cjs')
 
 if (args.global && args.outfile) {
   const outputFilepath = path.join(process.cwd(), args.outfile)
