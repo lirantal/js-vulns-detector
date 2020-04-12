@@ -44,16 +44,17 @@
     "url": "https://github.com/lirantal/js-vulns-detector.git"
   },
   "dependencies": {
-    "minimist": "^1.2.5"
+    "minimist": "^1.2.5",
+    "@rollup/plugin-commonjs": "^11.0.2",
+    "@rollup/plugin-json": "^4.0.2",
+    "@rollup/plugin-node-resolve": "^7.1.1",
+    "rollup": "^2.3.3"
   },
   "devDependencies": {
     "@babel/plugin-transform-runtime": "^7.9.0",
     "@babel/preset-env": "^7.9.0",
     "@commitlint/cli": "^7.2.1",
     "@commitlint/config-conventional": "^7.1.2",
-    "@rollup/plugin-commonjs": "^11.0.2",
-    "@rollup/plugin-json": "^4.0.2",
-    "@rollup/plugin-node-resolve": "^7.1.1",
     "@semantic-release/changelog": "^3.0.4",
     "@semantic-release/commit-analyzer": "^6.2.0",
     "@semantic-release/git": "^7.0.16",
@@ -78,7 +79,6 @@
     "lockfile-lint": "^2.0.1",
     "open-cli": "^5.0.0",
     "prettier": "^1.18.2",
-    "rollup": "^2.3.3",
     "semantic-release": "^15.13.19",
     "semver": "^7.1.3"
   },
