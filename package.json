@@ -3,19 +3,20 @@
   "version": "0.0.0-development",
   "description": "Inject JS to the DOM to find vulnerable JavaScript libraries",
   "bin": {
-    "js-vulns-detector": "./bin/cli.js"
+    "js-vulns-detector": "./bin/cli.cjs"
   },
   "engines": {
     "node": ">=10.0.0"
   },
   "type": "module",
   "scripts": {
-    "build": "node ./bin/cli.js --global --outfile dist/bundle-global.js",
+    "build": "node ./bin/cli.cjs --global --outfile dist/bundle-global.js",
     "lint": "eslint src/* && npm run lint:lockfile",
     "lint:lockfile": "lockfile-lint --path package-lock.json --type npm --validate-https --allowed-hosts npm yarn",
     "lint:fix": "eslint . --fix",
     "format": "prettier --config .prettierrc.js --write '**/*.js'",
     "test": "jest",
+    "prepare": "npm run build",
     "test:watch": "jest --watch",
     "coverage:view": "open-cli coverage/lcov-report/index.html",
     "semantic-release": "semantic-release"

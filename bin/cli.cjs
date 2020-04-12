@@ -6,7 +6,7 @@ const path = require('path')
 const { createJSBundle } = require('../scripts/build-bundle-global')
 
 if (args.global && args.outfile) {
-  let outputFilepath = path.join(process.cwd(), args.outfile)
+  const outputFilepath = path.join(process.cwd(), args.outfile)
 
   createJSBundle({
     outputFilepath
