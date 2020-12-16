@@ -55,7 +55,7 @@
     "minimist": "^1.2.5",
     "@rollup/plugin-commonjs": "^11.0.2",
     "@rollup/plugin-json": "^4.0.2",
-    "@rollup/plugin-node-resolve": "^7.1.1",
+    "@rollup/plugin-node-resolve": "^10.0.0",
     "rollup": "^2.3.3",
     "js-library-detector": "^5.9.0"
   },
