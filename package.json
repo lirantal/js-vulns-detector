@@ -56,7 +56,7 @@
     "@rollup/plugin-commonjs": "^11.0.2",
     "@rollup/plugin-json": "^4.0.2",
     "@rollup/plugin-node-resolve": "^7.1.1",
-    "rollup": "^2.3.3",
+    "rollup": "^2.34.0",
     "js-library-detector": "^5.9.0"
   },
   "devDependencies": {
