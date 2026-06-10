@@ -1,4 +1,8 @@
 {
+  "publishConfig": {
+    "provenance": true,
+    "access": "public"
+  },
   "name": "js-vulns-detector",
   "version": "0.0.0-development",
   "description": "Inject JS to the DOM to find vulnerable JavaScript libraries",
