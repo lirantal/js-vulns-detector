@@ -20,6 +20,9 @@
     "prepare": "npm run build",
     "test:watch": "jest --watch",
     "coverage:view": "open-cli coverage/lcov-report/index.html",
+    "lint:markdown": "markdownlint -c .github/.markdownlint.yml '**/**.md'",
+    "version": "changeset version",
+    "release": "changeset publish",
     "semantic-release": "semantic-release"
   },
   "author": {
@@ -85,11 +88,14 @@
     "husky": "^3.0.0",
     "jest": "^25.2.7",
     "lint-staged": "^9.2.0",
-    "lockfile-lint": "^2.0.1",
+    "lockfile-lint": "^5.0.0",
     "open-cli": "^5.0.0",
     "prettier": "^1.18.2",
     "semantic-release": "25.0.3",
-    "semver": "^7.1.3"
+    "semver": "^7.1.3",
+    "@changesets/changelog-github": "^0.6.0",
+    "@changesets/cli": "^2.31.0",
+    "markdownlint-cli": "0.45.0"
   },
   "jest": {
     "testEnvironment": "node",
@@ -138,6 +144,26 @@
     "extends": [
       "@commitlint/config-conventional"
     ]
+  },
+  "release": {
+    "branch": "master",
+    "analyzeCommits": {
+      "preset": "angular",
+      "releaseRules": [
+        {
+          "type": "docs",
+          "release": "patch"
+        },
+        {
+          "type": "refactor",
+          "release": "patch"
+        },
+        {
+          "type": "style",
+          "release": "patch"
+        }
+      ]
+    }
   },
   "standard": {
     "env": [
@@ -194,26 +220,6 @@
       "ecmaFeatures": {
         "impliedStrict": true
       }
-    }
-  },
-  "release": {
-    "branch": "master",
-    "analyzeCommits": {
-      "preset": "angular",
-      "releaseRules": [
-        {
-          "type": "docs",
-          "release": "patch"
-        },
-        {
-          "type": "refactor",
-          "release": "patch"
-        },
-        {
-          "type": "style",
-          "release": "patch"
-        }
-      ]
     }
   },
   "plugins": [
