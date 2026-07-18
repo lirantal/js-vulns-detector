@@ -56,11 +56,11 @@
   ],
   "dependencies": {
     "minimist": "^1.2.5",
-    "@rollup/plugin-commonjs": "^11.0.2",
-    "@rollup/plugin-json": "^4.0.2",
-    "@rollup/plugin-node-resolve": "^7.1.1",
-    "rollup": "^3.29.5",
-    "js-library-detector": "^5.9.0"
+    "@rollup/plugin-commonjs": "^29.0.3",
+    "@rollup/plugin-json": "^6.1.0",
+    "@rollup/plugin-node-resolve": "^16.0.3",
+    "rollup": "^4.62.0",
+    "js-library-detector": "^6.7.0"
   },
   "devDependencies": {
     "@babel/plugin-transform-runtime": "^7.9.0",
