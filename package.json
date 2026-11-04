@@ -80,7 +80,7 @@
     "eslint-plugin-standard": "^4.0.0",
     "husky": "^3.0.0",
     "jest": "^25.2.7",
-    "lint-staged": "^9.2.0",
+    "lint-staged": "^17.6.0",
     "lockfile-lint": "^2.0.1",
     "open-cli": "^5.0.0",
     "prettier": "^1.18.2",
