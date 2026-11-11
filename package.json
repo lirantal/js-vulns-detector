@@ -81,7 +81,7 @@
     "husky": "^3.0.0",
     "jest": "^25.2.7",
     "lint-staged": "^17.6.0",
-    "lockfile-lint": "^2.0.1",
+    "lockfile-lint": "^5.1.0",
     "open-cli": "^9.0.0",
     "prettier": "^3.9.9",
     "semver": "^7.1.3",
