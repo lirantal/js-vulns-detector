@@ -63,7 +63,7 @@
     "js-library-detector": "^6.7.0"
   },
   "devDependencies": {
-    "@babel/plugin-transform-runtime": "^7.9.0",
+    "@babel/plugin-transform-runtime": "^8.0.6",
     "@babel/preset-env": "^8.0.6",
     "@commitlint/cli": "^21.2.3",
     "@commitlint/config-conventional": "^21.2.3",
