@@ -79,7 +79,7 @@
     "eslint-plugin-security": "^4.1.0",
     "eslint-plugin-standard": "^5.0.0",
     "husky": "^9.1.7",
-    "jest": "^25.2.7",
+    "jest": "^30.5.2",
     "lint-staged": "^17.6.0",
     "lockfile-lint": "^5.1.0",
     "open-cli": "^9.0.0",
